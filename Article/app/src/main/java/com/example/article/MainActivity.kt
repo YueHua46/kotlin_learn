@@ -28,18 +28,16 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             ArticleTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    Column {
-                        GreetingImage(R.drawable.bg_compose_background, dsc = "banner图")
-                        Column {
-                            GreetingTitle(stringResource(R.string.blog_title))
-                            GreetingText(stringResource(R.string.blog_content1))
-                            GreetingText(stringResource(R.string.blog_content2))
-                        }
+                Column {
+                    GreetingImage(R.drawable.bg_compose_background, dsc = "banner图")
+                    Column(
+                        modifier = Modifier.padding(16.dp),
+                        // 使用Arrangement.spacedBy方法来设置元素内之间的间距，类似于css中gap效果
+                        verticalArrangement = Arrangement.spacedBy(16.dp)
+                    ) {
+                        GreetingTitle(stringResource(R.string.blog_title))
+                        GreetingText(stringResource(R.string.blog_content1))
+                        GreetingText(stringResource(R.string.blog_content2))
                     }
                 }
             }
