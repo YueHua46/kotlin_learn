@@ -16,6 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -58,12 +59,24 @@ fun GreetingImage(sourceId: Int,dsc: String, modifier: Modifier = Modifier) {
 
 @Composable
 fun GreetingTitle(text: String) {
-    Text(text = text, fontSize = 26.sp,modifier = Modifier.padding(10.dp))
+    Text(
+        text = text,
+        fontSize = 26.sp,
+        textAlign = TextAlign.Justify,
+        modifier = Modifier.padding(10.dp)
+    )
 }
 
 @Composable
 fun GreetingText(text: String) {
-    Text(text = text, fontSize = 16.sp,modifier = Modifier.padding(10.dp))
+    Text(
+        text = text,
+        fontSize = 16.sp,
+        // 文本的对齐方式
+        // TextAlign.Justify 表示文本应该两端对齐，也就是说，文本的左右两端都应该与其容器的边缘对齐。
+        textAlign = TextAlign.Justify,
+        modifier = Modifier.padding(10.dp)
+    )
 }
 
 @Preview(showBackground = true, showSystemUi = true, name = "我的预览")
