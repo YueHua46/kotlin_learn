@@ -63,7 +63,7 @@ fun GreetingTitle(text: String) {
         text = text,
         fontSize = 26.sp,
         textAlign = TextAlign.Justify,
-        modifier = Modifier.padding(10.dp)
+        modifier = Modifier.padding(16.dp)
     )
 }
 
@@ -75,7 +75,7 @@ fun GreetingText(text: String) {
         // 文本的对齐方式
         // TextAlign.Justify 表示文本应该两端对齐，也就是说，文本的左右两端都应该与其容器的边缘对齐。
         textAlign = TextAlign.Justify,
-        modifier = Modifier.padding(10.dp)
+        modifier = Modifier.padding(start = 16.dp, end = 16.dp)
     )
 }
 
