@@ -61,7 +61,7 @@ fun GreetingTitle(text: String) {
     Text(
         text = text,
         fontSize = 26.sp,
-        textAlign = TextAlign.Justify,
+        textAlign = TextAlign.Justify
     )
 }
 
